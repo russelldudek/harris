@@ -18,7 +18,8 @@ The campaign proposes a role-specific operating artifact: the **Mission Passport
 - `styles.css` - shared responsive and print styling
 - `app.js` - accessible Mission Passport interaction
 - `source-notes.md` - factual grounding and hypothesis boundaries
-- `docs/` - validated printable PDFs
+
+The HTML resume and cover letter were validated locally against the print contract: exactly two Letter pages for the resume and exactly one Letter page for the cover letter. Supplemental PDF exports were also validated locally.
 
 ## Integrity note
 
