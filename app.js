@@ -1,110 +1,98 @@
-const passportData = {
-  origin: {
-    serial: 'MISSION / ORIGIN / 001',
-    title: 'Start with real work, not an AI use-case list.',
-    summary: 'The passport begins with a named user, a specific workflow, and a decision or handoff worth improving.',
-    owner: 'Named', baseline: 'Observed', authority: 'Declared', value: 'Defined',
-    explainTitle: 'What the enablement lead makes easier',
-    bullets: [
-      'Observe where work is repetitive, slow, error-prone, information-heavy, or decision-constrained.',
-      'Require a business owner and a before-state before a solution is built.',
-      'Define whether the intended gain is time, quality, cycle time, customer experience, revenue support, or risk reduction.',
-      'Record what must remain a human judgment or approval.'
-    ]
+const dispatchData = {
+  finance: {
+    id:'AI-DISPATCH / FIN / 014',
+    title:'Recurring analysis and narrative preparation',
+    summary:'Observe where analysts repeatedly gather the same context, compare recurring variances, or draft explanations from governed source material.',
+    route:'Assist', owner:'Finance process owner', metric:'Cycle time + review quality', boundary:'Approved data + human sign-off',
+    routeTitle:'Why this route first',
+    routeSummary:'Begin with bounded assistance before automation. Preserve financial review authority, use approved data sources, and establish a baseline before scaling.',
+    pill:'Dispatch class · Assist',
+    bullets:['Observe the workflow with the people doing it.','Define the before-state and what quality means.','Prototype inside the approved tool set.','Measure repeat use and downstream review effort, not prompt volume.']
   },
-  proof: {
-    serial: 'MISSION / PROOF / 002',
-    title: 'Prove a changed workflow locally.',
-    summary: 'A Mission earns portability by changing work and producing credible evidence—not by generating a polished demo.',
-    owner: 'Accountable', baseline: 'Compared', authority: 'Observed', value: 'Measured',
-    explainTitle: 'The proof packet',
-    bullets: [
-      'Document the before-state, intervention, and after-state using workflow-appropriate measures.',
-      'Observe whether people repeat the behavior after the initial launch period.',
-      'Capture failure modes, workarounds, exception handling, and where human review mattered.',
-      'Separate real gains from novelty effects, cherry-picked examples, or tool-usage vanity metrics.'
-    ]
+  customer: {
+    id:'AI-DISPATCH / CS / 027',
+    title:'Case context and knowledge retrieval',
+    summary:'Test whether approved AI can reduce time spent reconstructing case history or locating trusted internal guidance while keeping customer decisions and communication accountable.',
+    route:'Build + Integrate', owner:'Customer Service owner', metric:'Handle time + first-touch quality', boundary:'Source traceability + human response authority',
+    routeTitle:'Why this route may need more than prompting',
+    routeSummary:'The likely value comes from governed context, retrieval, and workflow integration—not a generic chatbot. Start small and coordinate data and access boundaries early.',
+    pill:'Dispatch class · Build + Integrate',
+    bullets:['Map the systems and knowledge sources agents already use.','Define what content is authoritative and how answers remain traceable.','Pilot with a bounded case type before broad rollout.','Measure both speed and downstream correction or escalation.']
   },
-  trust: {
-    serial: 'MISSION / TRUST / 003',
-    title: 'Make the trust boundary visible.',
-    summary: 'Security and governance become part of the adoption design: understandable at the point of work and reviewable at scale.',
-    owner: 'Responsible', baseline: 'Traceable', authority: 'Explicit', value: 'Monitored',
-    explainTitle: 'The trust stamp',
-    bullets: [
-      'Record data class, system access, retention assumptions, and sensitive-data constraints.',
-      'Name what the AI can propose, what it may execute, and what requires human approval.',
-      'Document likely failure modes and escalation paths before broader adoption.',
-      'Create a review trail that is strong enough for governance without making low-risk work impossible.'
-    ]
+  operations: {
+    id:'AI-DISPATCH / OPS / 031',
+    title:'Issue triage and handoff clarity',
+    summary:'Look for repetitive classification, status translation, routing, and cross-system handoffs where structured automation can reduce queue friction.',
+    route:'Automate', owner:'Operations process owner', metric:'Queue age + rework', boundary:'Exception path + escalation owner',
+    routeTitle:'Why this route first',
+    routeSummary:'When the problem is repeatable flow rather than judgment, bounded automation can remove friction while preserving an explicit exception path.',
+    pill:'Dispatch class · Automate',
+    bullets:['Baseline queue age, reassignment, and missing-context failure points.','Automate only stable rules and make exceptions visible.','Keep the responsible process owner in control of routing logic.','Tune based on real exception patterns rather than ideal workflow maps.']
   },
-  transfer: {
-    serial: 'MISSION / TRANSFER / 004',
-    title: 'Package the reusable pattern, not the local costume.',
-    summary: 'Separate reusable workflow primitives from vertical-specific language, integrations, policy, data, and control needs.',
-    owner: 'Contributor', baseline: 'Portable', authority: 'Bounded', value: 'Comparable',
-    explainTitle: 'The transfer packet',
-    bullets: [
-      'Identify the reusable job-to-be-done, trigger, context inputs, decision step, output, review boundary, and metric.',
-      'List dependencies and local adaptations explicitly so reuse is informed rather than copied blindly.',
-      'Attach implementation notes, prompt or agent patterns where appropriate, and known failure lessons.',
-      'Make discovery easy for another team searching by workflow problem—not only by technology.'
-    ]
+  hr: {
+    id:'AI-DISPATCH / HR / 008',
+    title:'Role-specific AI literacy and confidence',
+    summary:'When the blocker is uncertainty, policy confusion, or weak examples, the right intervention may be training and guided practice—not software.',
+    route:'Enable', owner:'HR leader + role champions', metric:'Task adoption + confidence', boundary:'Approved-use guidance + sensitive-data rules',
+    routeTitle:'Why this route first',
+    routeSummary:'Teach AI through real tasks and explicit boundaries. A workshop should end with changed behavior, not a slide deck and a forgotten prompt list.',
+    pill:'Dispatch class · Enable',
+    bullets:['Assess role-specific tasks, confidence, and policy ambiguity.','Build examples from approved, low-risk workflows.','Use champions and office hours to reinforce practice.','Track repeated task use and manager-observed behavior change.']
   },
-  arrival: {
-    serial: 'MISSION / ARRIVAL / 005',
-    title: 'Revalidate locally and return the learning.',
-    summary: 'A receiving business unit owns adaptation. Its outcome improves the shared pattern for the next team.',
-    owner: 'Local', baseline: 'Re-established', authority: 'Reconfirmed', value: 'Returned',
-    explainTitle: 'The arrival contract',
-    bullets: [
-      'Name a receiving owner and confirm the local workflow baseline before adapting the Mission.',
-      'Revalidate controls, human authority, integrations, language, and success measure in local context.',
-      'Compare adaptation effort with expected value and stop work that no longer makes sense.',
-      'Return outcome data and adaptation notes to the shared Mission record so enablement compounds.'
-    ]
+  sales: {
+    id:'AI-DISPATCH / SALES / 019',
+    title:'Research, preparation, and reusable customer context',
+    summary:'Identify where sellers repeatedly assemble public research, internal proof, meeting context, or proposal inputs and where AI can improve preparation without fabricating claims.',
+    route:'Assist', owner:'Sales leader', metric:'Prep time + content quality', boundary:'Source grounding + claim review',
+    routeTitle:'Why this route first',
+    routeSummary:'Keep the seller responsible for commercial judgment while using AI to compress research and drafting work that is repetitive and evidence-bound.',
+    pill:'Dispatch class · Assist',
+    bullets:['Choose one recurring preparation workflow with a measurable before-state.','Ground outputs in approved internal and public sources.','Create review rules for claims, customer data, and commitments.','Measure preparation time and downstream rework or reuse.']
+  },
+  ps: {
+    id:'AI-DISPATCH / PS / 022',
+    title:'Discovery notes, scope traceability, and delivery handoff',
+    summary:'Explore whether AI can structure discovery outputs, preserve decisions, identify open questions, or improve handoff consistency across professional-services work.',
+    route:'Assist → Automate', owner:'Professional Services owner', metric:'Handoff completeness + rework', boundary:'Customer confidentiality + approval',
+    routeTitle:'Why the route can evolve',
+    routeSummary:'Start with assistance to learn the structure and failure modes. Automate only after the team proves which outputs are stable, trusted, and useful downstream.',
+    pill:'Dispatch class · Assist, then Automate',
+    bullets:['Observe discovery and handoff artifacts before designing a template.','Define customer-data handling and retention expectations.','Test structured summaries with downstream delivery users.','Automate only the stable parts that reduce rework without flattening nuance.']
   }
 };
 
-const tabs = document.querySelectorAll('.passport-tab');
-const serial = document.getElementById('passport-serial');
-const title = document.getElementById('passport-title');
-const summary = document.getElementById('passport-summary');
-const owner = document.getElementById('passport-owner');
-const baseline = document.getElementById('passport-baseline');
-const authority = document.getElementById('passport-authority');
-const value = document.getElementById('passport-value');
-const explainTitle = document.getElementById('passport-explain-title');
-const list = document.getElementById('passport-list');
-
-function showPassport(key) {
-  const item = passportData[key];
-  if (!item || !serial) return;
-  serial.textContent = item.serial;
-  title.textContent = item.title;
-  summary.textContent = item.summary;
-  owner.textContent = item.owner;
-  baseline.textContent = item.baseline;
-  authority.textContent = item.authority;
-  value.textContent = item.value;
-  explainTitle.textContent = item.explainTitle;
-  list.innerHTML = item.bullets.map(text => `<li>${text}</li>`).join('');
+const tabs = [...document.querySelectorAll('.dispatch-tab')];
+const get = id => document.getElementById(id);
+function showDepartment(key){
+  const d = dispatchData[key];
+  if(!d || !get('ticket-id')) return;
+  get('ticket-id').textContent=d.id;
+  get('ticket-title').textContent=d.title;
+  get('ticket-summary').textContent=d.summary;
+  get('ticket-route').textContent=d.route;
+  get('ticket-owner').textContent=d.owner;
+  get('ticket-metric').textContent=d.metric;
+  get('ticket-boundary').textContent=d.boundary;
+  get('route-title').textContent=d.routeTitle;
+  get('route-summary').textContent=d.routeSummary;
+  get('route-pill').textContent=d.pill;
+  get('route-list').innerHTML=d.bullets.map(b=>`<li>${b}</li>`).join('');
 }
 
-tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
-    tab.setAttribute('aria-selected', 'true');
-    showPassport(tab.dataset.passport);
+tabs.forEach((tab,index)=>{
+  tab.addEventListener('click',()=>{
+    tabs.forEach(t=>t.setAttribute('aria-selected','false'));
+    tab.setAttribute('aria-selected','true');
+    showDepartment(tab.dataset.dept);
   });
-  tab.addEventListener('keydown', event => {
-    if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+  tab.addEventListener('keydown',event=>{
+    if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
     event.preventDefault();
-    let next = index;
-    if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-    if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
-    if (event.key === 'Home') next = 0;
-    if (event.key === 'End') next = tabs.length - 1;
+    let next=index;
+    if(event.key==='ArrowRight') next=(index+1)%tabs.length;
+    if(event.key==='ArrowLeft') next=(index-1+tabs.length)%tabs.length;
+    if(event.key==='Home') next=0;
+    if(event.key==='End') next=tabs.length-1;
     tabs[next].focus();
     tabs[next].click();
   });
