@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Russell Dudek candidate vision for ServiceLink AI Enablement Lead: dispatch AI to the work, then prove it changed the work.">
+  <title>Russell Dudek | ServiceLink AI Enablement Lead Candidate Vision</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-nav no-print">
+  <div class="site-shell inner">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/servicelink-logo.svg" alt="ServiceLink"><span>Russell Dudek <small>AI Enablement Lead candidate vision</small></span></a>
+    <nav class="nav-links" aria-label="Campaign navigation">
+      <a href="#mandate">Mandate</a>
+      <a href="#thesis">Thesis</a>
+      <a href="#dispatch">AI Dispatch</a>
+      <a href="#proof">Evidence</a>
+      <a href="#plan">90 days</a>
+      <a href="resume.html">Resume</a>
+      <a href="cover-letter.html">Letter</a>
+      <a href="interview-brief.html">Brief</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="site-shell hero-grid">
+      <div>
+        <div class="eyebrow">ServiceLink · AI Enablement Lead candidate vision · Russell Dudek</div>
+        <h1>Dispatch AI to the work.</h1>
+        <p class="lede">ServiceLink is not hiring an AI strategist to write a roadmap from a distance. It is hiring a hands-on internal operator who can find workflow friction, prioritize the right opportunities, build useful interventions, teach people how to use them, govern them, and prove they changed the work.</p>
+        <div class="hero-actions no-print">
+          <a class="button" href="#dispatch">Open the AI Dispatch Board</a>
+          <a class="button secondary" href="interview-brief.html">Read the interview thesis</a>
+        </div>
+      </div>
+      <aside class="dispatch-console" aria-label="Illustrative AI enablement dispatch queue">
+        <div class="console-top"><div class="console-title">AI Enablement Dispatch · Illustrative queue</div><div class="console-status">Operating</div></div>
+        <div class="queue">
+          <div class="queue-row"><strong>FIN-014</strong><span>Recurring analysis and narrative prep</span><b class="route-badge route-assist">Assist</b></div>
+          <div class="queue-row"><strong>CS-027</strong><span>Case context and knowledge retrieval</span><b class="route-badge route-build">Build</b></div>
+          <div class="queue-row"><strong>OPS-031</strong><span>Issue triage and handoff clarity</span><b class="route-badge route-automate">Automate</b></div>
+          <div class="queue-row"><strong>HR-008</strong><span>Role-specific AI literacy gap</span><b class="route-badge route-enable">Enable</b></div>
+          <div class="queue-row"><strong>IT-ESC</strong><span>Identity, access, or platform dependency</span><b class="route-badge route-escalate">Escalate</b></div>
+        </div>
+        <div class="console-footer">
+          <div class="console-metric"><small>Measure</small><strong>Changed work</strong></div>
+          <div class="console-metric"><small>Guardrail</small><strong>Human authority</strong></div>
+          <div class="console-metric"><small>Cadence</small><strong>Learn + reroute</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="company-strip" aria-label="ServiceLink company context">
+    <div class="site-shell company-grid">
+      <div class="company-fact"><strong>30 years</strong><span>of utility field-service industry experience stated on ServiceLink’s official site.</span></div>
+      <div class="company-fact"><strong>80+ clients</strong><span>across the United States and Canada.</span></div>
+      <div class="company-fact"><strong>6,500</strong><span>daily users supported by ServiceLink software.</span></div>
+      <div class="company-fact"><strong>5 utility domains</strong><span>water, gas, electric, fiber, and sanitation.</span></div>
+    </div>
+  </section>
+
+  <section class="role-strip" aria-label="Role reality">
+    <div class="site-shell role-grid">
+      <div class="role-fact"><strong>EVP</strong><span>Direct executive visibility means progress, blockers, adoption, and value must be legible.</span></div>
+      <div class="role-fact"><strong>6+ functions</strong><span>Finance, Customer Service, Operations, HR, Sales, Professional Services—and likely more.</span></div>
+      <div class="role-fact"><strong>0 reports</strong><span>The operating system must create leverage through champions, standards, tools, and influence.</span></div>
+      <div class="role-fact"><strong>Full lifecycle</strong><span>Readiness → use case → business case → build → deploy → adoption → measurement → iteration.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="mandate">
+    <div class="site-shell">
+      <div class="section-head">
+        <div><div class="eyebrow">The real mandate</div><h2>Build the function while doing the work.</h2></div>
+        <p>The role combines readiness assessment, training, use-case discovery, backlog management, lightweight business cases, hands-on delivery, governance, executive reporting, and change management. The trap is obvious: one person can become a workshop calendar, a random-request queue, or shadow IT. The mandate is to create an operating system that makes limited enablement capacity compound.</p>
+      </div>
+      <div class="boundary-map" aria-label="Role boundaries">
+        <article class="boundary"><div class="label">R&amp;D owns</div><h3>Customer-facing product AI</h3><ul><li>AI/ML product roadmap</li><li>ServiceLink development priorities</li><li>Technical product decisions</li></ul></article>
+        <article class="boundary center"><div class="label">AI Enablement owns</div><h3>Business workflow adoption</h3><ul><li>Readiness and literacy</li><li>Use-case discovery and prioritization</li><li>Prompts, templates, automations, bots, internal tools, and integrations</li><li>Governance at the point of work</li><li>Adoption, champions, measurement, iteration</li></ul></article>
+        <article class="boundary"><div class="label">IT owns</div><h3>Infrastructure and platform decisions</h3><ul><li>Enterprise technology architecture</li><li>Identity, access, and platform choices</li><li>Infrastructure operations and controls</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">

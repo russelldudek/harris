@@ -1,0 +1,52 @@
+name: Generate campaign PDFs
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdfs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Assemble aligned source
+        run: |
+          cat source-parts/index.part* > index.html
+          cat source-parts/styles.part* > styles.css
+      - name: Install PDF tooling
+        run: |
+          npm install --no-save playwright@1.54.2
+          npx playwright install --with-deps chromium
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+      - name: Generate PDFs
+        run: node scripts/generate-pdfs.mjs
+      - name: Verify PDF contracts
+        shell: bash
+        run: |
+          test "$(pdfinfo docs/Russell-Dudek-ServiceLink-Resume.pdf | awk '/^Pages:/{print $2}')" = "2"
+          test "$(pdfinfo docs/Russell-Dudek-ServiceLink-Cover-Letter.pdf | awk '/^Pages:/{print $2}')" = "1"
+          test "$(pdfinfo docs/Russell-Dudek-ServiceLink-Interview-Brief.pdf | awk '/^Pages:/{print $2}')" = "3"
+          test "$(pdfinfo docs/Russell-Dudek-ServiceLink-AI-Dispatch-Ticket.pdf | awk '/^Pages:/{print $2}')" = "1"
+      - name: Commit aligned source and generated PDFs
+        shell: bash
+        run: |
+          rm -rf source-parts
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A index.html styles.css docs source-parts
+          if git diff --cached --quiet; then
+            echo "Campaign artifacts already current."
+          else
+            git commit -m "docs: finalize aligned campaign artifacts [skip ci]"
+            git push
+          fi
