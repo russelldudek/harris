@@ -14,37 +14,39 @@
 
 **Dispatch AI to the work.**
 
-Run internal AI enablement like a field-service operation: capture workflow friction, triage value and risk, dispatch the smallest useful intervention, verify it in real work, and reroute based on evidence.
+Run internal AI enablement like a field-service operation: capture workflow friction, triage value and trust, dispatch the smallest useful intervention, verify it in real work, and reroute based on evidence.
 
-## Role-specific operating artifact
+## Role-specific operating system
 
-The **AI Dispatch Ticket** is a lightweight intake, triage, routing, field-test, and learning record. It deliberately routes demand to one of five responses:
-
-- Enable
-- Assist
-- Automate
-- Build + Integrate
-- Escalate
-
-The artifact prevents a one-person enablement function from becoming a generic workshop calendar, random request queue, or shadow IT/R&D function.
+The campaign uses an animated **AI Dispatch route simulator**, a keyboard-accessible departmental **AI Dispatch Board**, and a printable **AI Dispatch Ticket**. Demand is deliberately routed to one of five responses: Enable, Assist, Automate, Build + Integrate, or Escalate. This prevents a one-person function from becoming a workshop calendar, random-request queue, or shadow IT/R&D function.
 
 ## Brand intelligence
 
-The campaign uses the official ServiceLink visual direction as a restrained reference: the two-tone orange/blue mark, dark wordmark, clean sans-serif typography, generous white space, utility-workflow imagery, and route/connection motifs. The local SVG is a candidate-campaign reconstruction based on the official logo asset linked in `source-notes.md`; it is not presented as an official supplied brand file. Original dispatch visuals are used instead of copying ServiceLink product UI.
+The campaign uses ServiceLink’s official visual direction as a restrained reference: orange/blue identity cues, dark wordmark character, clean sans-serif typography, generous white space, utility-workflow context, and route/connection motifs. Original dispatch and stakeholder visuals are used instead of copying ServiceLink product UI. Asset provenance and usage boundaries are documented in `source-notes.md`.
 
-## Files
+## Main-branch manifest
 
-- `index.html` — candidate vision site with interactive departmental dispatch hypotheses
-- `resume.html` — exactly two printable US Letter pages with reciprocal navigation and PDF download
-- `cover-letter.html` — exactly one printable US Letter page with reciprocal navigation and PDF download
+- `index.html` — complete candidate vision with role-derived motion, stakeholder topology, scorecard, evidence, objection, questions, and document dock
+- `resume.html` — exactly two printable US Letter pages with `View Cover Letter` and PDF download
+- `cover-letter.html` — exactly one printable US Letter page with `View Resume` and PDF download
 - `interview-brief.html` — three-page interview thesis brief with PDF download
-- `ai-dispatch-ticket.html` — one-page printable role-specific operating artifact with PDF download
-- `styles.css` — shared responsive, accessible, and print system
-- `app.js` — accessible AI Dispatch Board interaction
+- `90-day-plan.html` — standalone two-page entry plan with PDF download
+- `ai-dispatch-ticket.html` — one-page printable operating artifact with PDF download
+- `styles.css` — responsive, accessible, reduced-motion, and print styling
+- `app.js` — route simulation and keyboard-accessible scenario interaction
 - `assets/servicelink-logo.svg` — local candidate-use reconstruction with official-source provenance
-- `source-notes.md` — role, company, brand, evidence, and hypothesis boundaries
-- `docs/` — generated and visually verified PDF artifacts
+- `docs/Russell-Dudek-ServiceLink-Resume.pdf`
+- `docs/Russell-Dudek-ServiceLink-Cover-Letter.pdf`
+- `docs/Russell-Dudek-ServiceLink-Interview-Brief.pdf`
+- `docs/Russell-Dudek-ServiceLink-90-Day-Plan.pdf`
+- `docs/Russell-Dudek-ServiceLink-AI-Dispatch-Ticket.pdf`
+- `source-notes.md`
+- `README.md`
+
+## Audited behavior
+
+The campaign was rendered at 1440×900, 1280×800, 768×1024, and 390×844, plus reduced-motion mode. The audit covered the full page, responsive navigation, overflow, keyboard tab interaction, route-state clarity, mobile composition, document integration, and reduced-motion usability. The locally rendered PDFs were visually reviewed and have page counts of 2 / 1 / 3 / 2 / 1.
 
 ## Integrity note
 
-The role facts are based on the complete job description supplied by Russell Dudek and the original Workday URL. Company context and brand intelligence are grounded in official Harris and ServiceLink sources. Department examples, the AI Dispatch operating model, scorecard, and first-90-day approach are candidate hypotheses for discovery rather than claims about undocumented ServiceLink process.
+Role facts are based on the complete job description supplied by Russell Dudek and the original Workday URL. Company context and brand intelligence are grounded in official Harris and ServiceLink sources. Department scenarios, the AI Dispatch operating model, scorecard, stakeholder contract, and 90-day approach are candidate hypotheses for discovery rather than claims about undocumented ServiceLink process.
